@@ -1,0 +1,24 @@
+To get cpu info
+
+Cat /proc/cpuinfo | grep -I 'process\|model\|cpu cores'
+To get memory info
+Cat /proc/meminfo |grep -I 'Memtotal\|MemFree\|Buffer\|active\|inactive' 
+
+#Free -m
+Awk '/^Mem/ {print("used space", 100*$3/$2);}' <(free -m)
+Free -m | grep ^Mem | tr -s ' ' | cut -d ' ' -f 3
+
+
+
+https://www.tecmint.com/command-line-tools-to-monitor-linux-performance/
+
+
+https://files.fosswire.com/2007/08/fwunixref.pdf
+
+https://www.linuxtrainingacademy.com/linux-commands-cheat-sheet/
+
+
+
+https://arkit.co.in/category/all-scripts/
+
+
